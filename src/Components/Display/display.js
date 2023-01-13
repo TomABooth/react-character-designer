@@ -1,7 +1,7 @@
 import React from 'react';
 import './display.css';
 
-export default function Display({ head, torso, legs }) {
+export default function Display({ head, torso, legs, catchphrase }) {
   return (
     <div className="character-container">
       <div className="head-container">
@@ -12,6 +12,9 @@ export default function Display({ head, torso, legs }) {
       </div>
       <div className="leg-container">
         <img className="leg-img" src={`${process.env.PUBLIC_URL}/Legs/${legs}.png`} />
+      </div>
+      <div className="catchphrase-container">
+        <p className="catchphrase">{catchphrase}</p>
       </div>
     </div>
   );

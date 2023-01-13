@@ -1,7 +1,7 @@
 import React from 'react';
 import './controls.css';
 
-export default function Controls({ head, setHead, torso, setTorso, legs, setLegs }) {
+export default function Controls({ head, setHead, torso, setTorso, legs, setLegs, catchphrase, setCatchphrase }) {
   return (
     <div className="inputs">
       <label>Head</label>
@@ -23,7 +23,7 @@ export default function Controls({ head, setHead, torso, setTorso, legs, setLegs
         <option>Legs 3</option>
       </select>
       <label>Catchphrase</label>
-      <textarea type="text" name="Catchphrase" />
+      <textarea type="text" name="Catchphrase" value={catchphrase} onChange={(e) => setCatchphrase(e.target.value)} />
       <p className="record">
         You have changed your head 0 times, your torso 0 times and your legs 0 times.
       </p>

@@ -1,7 +1,6 @@
 footer {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: red;
-    height: 5vh;
-  }
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 5vh;
+}
