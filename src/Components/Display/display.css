@@ -1,0 +1,21 @@
+.character-container {
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+  padding-top: 50px;
+  padding-bottom: 70px;
+  margin-left: 20px;
+  margin-right: 20px;
+}
+
+.head-img {
+  height: 110px;
+}
+
+.torso-img {
+  height: 200px;
+}
+
+.leg-img {
+  height: 200px;
+}
