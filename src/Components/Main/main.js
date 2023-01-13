@@ -9,6 +9,9 @@ export default function Main() {
   const [torso, setTorso] = useState('Torso 1');
   const [legs, setLegs] = useState('Legs 1');
   const [catchphrase, setCatchphrase] = useState('Catchphrase');
+  const [headCount, setHeadCount] = useState(0);
+  const [torsoCount, setTorsoCount] = useState(0);
+  const [legCount, setLegCount] = useState(0);
 
   return (
     <main>
@@ -21,6 +24,12 @@ export default function Main() {
         setLegs={setLegs}
         catchphrase={catchphrase}
         setCatchphrase={setCatchphrase}
+        headCount={headCount}
+        setHeadCount={setHeadCount}
+        torsoCount={torsoCount}
+        setTorsoCount={setTorsoCount}
+        legCount={legCount}
+        setLegCount={setLegCount}
       />
       <Display head={head} torso={torso} legs={legs} catchphrase={catchphrase} />
     </main>
