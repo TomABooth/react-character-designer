@@ -17,31 +17,45 @@ export default function Controls({
   legCount,
   setLegCount,
 }) {
+  const handleChange = (e) => {
+    e.target.name === 'head' &&
+      setHead(
+        e.target.value,
+        setHeadCount(() => {
+          return headCount + 1;
+        })
+      );
+    e.target.name === 'torso' &&
+      setTorso(
+        e.target.value,
+        setTorsoCount(() => {
+          return torsoCount + 1;
+        })
+      );
+    e.target.name === 'legs' &&
+      setLegs(
+        e.target.value,
+        setLegCount(() => {
+          return legCount + 1;
+        })
+      );
+  };
   return (
     <div className="inputs">
       <label>Head</label>
-      <select
-        value={head}
-        onChange={((e) => setHead(e.target.value), setHeadCount((prevState) => prevState + 1))}
-      >
+      <select name="head" value={head} onChange={handleChange}>
         <option>Head 1</option>
         <option>Head 2</option>
         <option>Head 3</option>
       </select>
       <label>Torso</label>
-      <select
-        value={torso}
-        onChange={((e) => setTorso(e.target.value), setTorsoCount((prevState) => prevState + 1))}
-      >
+      <select name="torso" value={torso} onChange={handleChange}>
         <option>Torso 1</option>
         <option>Torso 2</option>
         <option>Torso 3</option>
       </select>
       <label>Legs</label>
-      <select
-        value={legs}
-        onChange={((e) => setLegs(e.target.value), setLegCount((prevState) => prevState + 1))}
-      >
+      <select name="legs" value={legs} onChange={handleChange}>
         <option>Legs 1</option>
         <option>Legs 2</option>
         <option>Legs 3</option>
